@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل فعاليات الجامعة الافتراضية | الرئيسية</title>
+    <!-- خط Cairo من Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 RTL CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- ملف التنسيق الخاص بالموقع -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <!-- رأس الصفحة Header: الشعار + قائمة التنقل -->
+    <header class="sticky-top shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary-custom">
+            <div class="container">
+                <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+                    <i class="bi bi-calendar2-check fs-4"></i>
+                    <span>دليل فعاليات SVU</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">الرئيسية</a></li>
+                        <li class="nav-item"><a class="nav-link" href="events.html">كل الفعاليات</a></li>
+                        <li class="nav-item"><a class="nav-link" href="event.html">تفاصيل فعالية</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">عن الدليل</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                    <!-- زر تبديل الوضع الليلي (Bonus) -->
+                    <button id="darkModeToggle" class="btn btn-outline-light btn-sm ms-lg-3">
+                        <i class="bi bi-moon-stars"></i> الوضع الليلي
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- المحتوى الرئيسي Main -->
+    <main>
+        <!-- قسم أسماء وأرقام الطلاب المشاركين في الوظيفة (مطلوب أساسي في الصفحة الرئيسية) -->
+        <section class="py-3 bg-light border-bottom student-info-bar">
+            <div class="container">
+                <div class="card border-primary shadow-sm">
+                    <div class="card-body py-2 px-3 d-flex flex-wrap justify-content-between align-items-center">
+                        <div>
+                            <strong class="text-primary"><i class="bi bi-people-fill"></i> الطلاب المشاركون في الوظيفة (مقرر BWP401):</strong>
+                        </div>
+                        <div class="d-flex flex-wrap gap-3 mt-2 mt-md-0 small fw-semibold">
+                            <span class="badge bg-secondary p-2">أحمد العلي - ahmad_154210</span>
+                            <span class="badge bg-secondary p-2">سارة حسن - sara_162340</span>
+                            <span class="badge bg-secondary p-2">محمد الخطيب - mohamad_159870</span>
+                            <span class="badge bg-secondary p-2">نور الشامي - nour_164112</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- القسم الأول: سلايدر الفعاليات البارزة هذا الأسبوع -->
+        <section class="py-4 container">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="section-title h4 fw-bold mb-0">فعاليات بارزة هذا الأسبوع</h2>
+                <span class="badge bg-warning text-dark">مختارات الأسبوع</span>
+            </div>
+
+            <div id="featuredCarousel" class="carousel slide rounded overflow-hidden shadow-sm" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <!-- شريحة 1 -->
+                    <div class="carousel-item active">
+                        <img src="assets/img/event1.jpg" onerror="this.src='https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80'" class="d-block w-100 slider-img" alt="ندوة مشاريع التخرج">
+                        <div class="carousel-caption d-block bg-dark bg-opacity-75 rounded p-3">
+                            <span class="badge bg-info text-dark mb-2">ندوات علمية</span>
+                            <h3 class="h5 fw-bold">الندوة التعريفية بمشاريع التخرج لطلاب الهندسة المعلوماتية</h3>
+                            <p class="small mb-2">لقاء مفتوح مع المشرفين لمناقشة أفكار المشاريع وخطوات التسجيل للفصل الحالي.</p>
+                            <a href="event.html" class="btn btn-sm btn-warning fw-semibold">عرض التفاصيل</a>
+                        </div>
+                    </div>
+                    <!-- شريحة 2 -->
+                    <div class="carousel-item">
+                        <img src="assets/img/event2.jpg" onerror="this.src='https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80'" class="d-block w-100 slider-img" alt="مسابقة البرمجة">
+                        <div class="carousel-caption d-block bg-dark bg-opacity-75 rounded p-3">
+                            <span class="badge bg-success mb-2">تقنية وبرمجة</span>
+                            <h3 class="h5 fw-bold">مسابقة البرمجة الجامعية لطلاب SVU</h3>
+                            <p class="small mb-2">تنافس مع زملائك في حل الخوارزميات وتأهل لتمثيل الجامعة في المسابقة الإقليمية.</p>
+                            <a href="event.html" class="btn btn-sm btn-warning fw-semibold">عرض التفاصيل</a>
+                        </div>
+                    </div>
+                    <!-- شريحة 3 -->
+                    <div class="carousel-item">
+                        <img src="assets/img/event3.jpg" onerror="this.src='https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1200&q=80'" class="d-block w-100 slider-img" alt="معرض الكتاب">
+                        <div class="carousel-caption d-block bg-dark bg-opacity-75 rounded p-3">
+                            <span class="badge bg-primary mb-2">ثقافة</span>
+                            <h3 class="h5 fw-bold">الأمسية الثقافية ومعرض تبادل الكتب الجامعية</h3>
+                            <p class="small mb-2">فرصة لتبادل المراجع الدراسية والكتب الثقافية بين الطلاب في مراكز النفاذ.</p>
+                            <a href="event.html" class="btn btn-sm btn-warning fw-semibold">عرض التفاصيل</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#featuredCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </section>
+
+        <!-- القسم الثاني: تصنيفات سريعة (أزرار / Badges) -->
+        <section class="py-4 bg-section-alt">
+            <div class="container text-center">
+                <h2 class="section-title h4 fw-bold mb-3">تصفح حسب التصنيف</h2>
+                <p class="text-muted small mb-3">اختر التصنيف المفضل لديك ليتم حفظه وعرض الفعاليات المناسبة لك</p>
+                <div class="categories-flex d-flex flex-wrap justify-content-center gap-2">
+                    <button class="btn btn-outline-primary category-quick-btn active" data-category="all">الكل</button>
+                    <button class="btn btn-outline-primary category-quick-btn" data-category="ندوات علمية">ندوات علمية</button>
+                    <button class="btn btn-outline-primary category-quick-btn" data-category="تقنية وبرمجة">تقنية وبرمجة</button>
+                    <button class="btn btn-outline-primary category-quick-btn" data-category="ثقافة">ثقافة</button>
+                    <button class="btn btn-outline-primary category-quick-btn" data-category="رياضة">رياضة</button>
+                    <button class="btn btn-outline-primary category-quick-btn" data-category="موسيقى وفنون">موسيقى وفنون</button>
+                    <button class="btn btn-outline-primary category-quick-btn" data-category="عائلي واجتماعي">عائلي واجتماعي</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- القسم الثالث: شبكة كروت أحدث الفعاليات -->
+        <section class="py-5 container">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="section-title h4 fw-bold mb-0">أحدث الفعاليات المضافة</h2>
+                <a href="events.html" class="btn btn-sm btn-primary">عرض كل الفعاليات <i class="bi bi-arrow-left"></i></a>
+            </div>
+
+            <!-- استخدام Bootstrap Grid لتقسيم الكروت -->
+            <div class="row g-4" id="homeEventsContainer">
+                <!-- كرت 1 -->
+                <div class="col-12 col-md-6 col-lg-4 home-event-item" data-category="ندوات علمية">
+                    <div class="card h-100 event-card shadow-sm">
+                        <img src="assets/img/event1.jpg" onerror="this.src='https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80'" class="card-img-top event-img" alt="ندوة مشاريع التخرج">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-info text-dark">ندوات علمية</span>
+                                <small class="text-muted"><i class="bi bi-calendar3"></i> 2026-11-05</small>
+                            </div>
+                            <h3 class="card-title h6 fw-bold">الندوة التعريفية بمشاريع التخرج ITE</h3>
+                            <p class="card-text small text-muted flex-grow-1">شرح آلية اختيار مشروع التخرج وتشكيل المجموعات الطلابية ومعايير التقييم.</p>
+                            <div class="mt-2 pt-2 border-top d-flex justify-content-between align-items-center">
+                                <small class="text-secondary"><i class="bi bi-geo-alt"></i> دمشق - المقر الرئيسي</small>
+                                <a href="event.html" class="btn btn-sm btn-outline-primary">التفاصيل</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- كرت 2 -->
+                <div class="col-12 col-md-6 col-lg-4 home-event-item" data-category="تقنية وبرمجة">
+                    <div class="card h-100 event-card shadow-sm">
+                        <img src="assets/img/event2.jpg" onerror="this.src='https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80'" class="card-img-top event-img" alt="ورشة تطوير الويب">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-success">تقنية وبرمجة</span>
+                                <small class="text-muted"><i class="bi bi-calendar3"></i> 2026-11-12</small>
+                            </div>
+                            <h3 class="card-title h6 fw-bold">ورشة عمل أساسيات تصميم الويب</h3>
+                            <p class="card-text small text-muted flex-grow-1">تدريب عملي للمبتدئين حول بناء صفحات متجاوبة باستخدام HTML و CSS و Bootstrap.</p>
+                            <div class="mt-2 pt-2 border-top d-flex justify-content-between align-items-center">
+                                <small class="text-secondary"><i class="bi bi-geo-alt"></i> مركز نفاذ حلب</small>
+                                <a href="event.html" class="btn btn-sm btn-outline-primary">التفاصيل</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- كرت 3 -->
+                <div class="col-12 col-md-6 col-lg-4 home-event-item" data-category="ثقافة">
+                    <div class="card h-100 event-card shadow-sm">
+                        <img src="assets/img/event3.jpg" onerror="this.src='https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=600&q=80'" class="card-img-top event-img" alt="معرض الكتب">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-primary">ثقافة</span>
+                                <small class="text-muted"><i class="bi bi-calendar3"></i> 2026-11-18</small>
+                            </div>
+                            <h3 class="card-title h6 fw-bold">معرض تبادل الكتب والمراجع الجامعية</h3>
+                            <p class="card-text small text-muted flex-grow-1">فعالية طلابية لتبادل الملخصات والكتب البرمجية والروايات بين طلاب مختلف البرامج.</p>
+                            <div class="mt-2 pt-2 border-top d-flex justify-content-between align-items-center">
+                                <small class="text-secondary"><i class="bi bi-geo-alt"></i> مركز نفاذ اللاذقية</small>
+                                <a href="event.html" class="btn btn-sm btn-outline-primary">التفاصيل</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- كرت 4 -->
+                <div class="col-12 col-md-6 col-lg-4 home-event-item" data-category="رياضة">
+                    <div class="card h-100 event-card shadow-sm">
+                        <img src="assets/img/event4.jpg" onerror="this.src='https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&w=600&q=80'" class="card-img-top event-img" alt="بطولة الشطرنج">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-danger">رياضة</span>
+                                <small class="text-muted"><i class="bi bi-calendar3"></i> 2026-11-22</small>
+                            </div>
+                            <h3 class="card-title h6 fw-bold">بطولة الشطرنج السنوية لطلاب الجامعة</h3>
+                            <p class="card-text small text-muted flex-grow-1">منافسات فردية بنظام خروج المغلوب لجميع طلاب الجامعة مع جوائز رمزية للفائزين.</p>
+                            <div class="mt-2 pt-2 border-top d-flex justify-content-between align-items-center">
+                                <small class="text-secondary"><i class="bi bi-geo-alt"></i> مركز نفاذ حمص</small>
+                                <a href="event.html" class="btn btn-sm btn-outline-primary">التفاصيل</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- كرت 5 -->
+                <div class="col-12 col-md-6 col-lg-4 home-event-item" data-category="موسيقى وفنون">
+                    <div class="card h-100 event-card shadow-sm">
+                        <img src="assets/img/event5.jpg" onerror="this.src='https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=600&q=80'" class="card-img-top event-img" alt="أمسية موسيقية">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-warning text-dark">موسيقى وفنون</span>
+                                <small class="text-muted"><i class="bi bi-calendar3"></i> 2026-11-25</small>
+                            </div>
+                            <h3 class="card-title h6 fw-bold">أمسية المواهب الموسيقية والرسم الرقمي</h3>
+                            <p class="card-text small text-muted flex-grow-1">عرض للمواهب الطلابية في العزف والفنون البصرية والتصميم الجرافيكي.</p>
+                            <div class="mt-2 pt-2 border-top d-flex justify-content-between align-items-center">
+                                <small class="text-secondary"><i class="bi bi-geo-alt"></i> دمشق - المدرج الرئيسي</small>
+                                <a href="event.html" class="btn btn-sm btn-outline-primary">التفاصيل</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- كرت 6 -->
+                <div class="col-12 col-md-6 col-lg-4 home-event-item" data-category="عائلي واجتماعي">
+                    <div class="card h-100 event-card shadow-sm">
+                        <img src="assets/img/event6.jpg" onerror="this.src='https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80'" class="card-img-top event-img" alt="لقاء الخريجين">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-secondary">عائلي واجتماعي</span>
+                                <small class="text-muted"><i class="bi bi-calendar3"></i> 2026-11-30</small>
+                            </div>
+                            <h3 class="card-title h6 fw-bold">اللقاء الاجتماعي للخريجين وعائلاتهم</h3>
+                            <p class="card-text small text-muted flex-grow-1">يوم مفتوح للتعارف وتبادل الخبرات المهنية بين الخريجين والطلاب الحاليين.</p>
+                            <div class="mt-2 pt-2 border-top d-flex justify-content-between align-items-center">
+                                <small class="text-secondary"><i class="bi bi-geo-alt"></i> مركز نفاذ طرطوس</small>
+                                <a href="event.html" class="btn btn-sm btn-outline-primary">التفاصيل</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- زر الصعود للأعلى (Bonus) -->
+    <button id="scrollTopBtn" title="العودة للأعلى"><i class="bi bi-arrow-up"></i></button>
+
+    <!-- تذييل الصفحة Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row g-3 align-items-center text-center text-md-start">
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-1">دليل فعاليات الجامعة الافتراضية</h5>
+                    <p class="small text-secondary mb-0">منصة طلابية لمتابعة الأنشطة العلمية والثقافية في جميع مراكز النفاذ.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <p class="small mb-1"><i class="bi bi-envelope"></i> events@svuonline.org</p>
+                    <p class="small mb-0">جميع الحقوق محفوظة &copy; 2026 - وظيفة مقرر BWP401</p>
+                </div>
+                <div class="col-md-4 text-center text-md-end">
+                    <a href="https://facebook.com" target="_blank" class="text-light fs-5 me-3"><i class="bi bi-facebook"></i></a>
+                    <a href="https://telegram.org" target="_blank" class="text-light fs-5 me-3"><i class="bi bi-telegram"></i></a>
+                    <a href="https://linkedin.com" target="_blank" class="text-light fs-5"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- ملف الجافاسكريبت الخاص بالموقع -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
