@@ -1,0 +1,131 @@
+/* ===================================================
+   ملف التنسيقات الأساسي - دليل فعاليات الجامعة الافتراضية
+   مقرر BWP401
+   =================================================== */
+
+/* 1. الإعدادات العامة والخطوط */
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f8f9fa; /* لون خلفية محايد ومريح للعين */
+    color: #212529;
+    line-height: 1.6;
+}
+
+/* 2. الهوية اللونية الأساسية والثانوية */
+.bg-primary-custom {
+    background-color: #1e40af; /* أزرق جامعي واضح للهيدر */
+}
+
+.bg-section-alt {
+    background-color: #eef2ff; /* خلفية ثانوية هادئة لتمييز الأقسام */
+}
+
+.section-title {
+    border-right: 4px solid #1e40af;
+    padding-right: 10px;
+}
+
+/* 3. تنسيق صور السلايدر والكروت */
+.slider-img {
+    height: 380px;
+    object-fit: cover;
+}
+
+.event-img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.detail-main-img {
+    max-height: 380px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.gallery-thumb {
+    height: 100px;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.2s ease;
+}
+
+.gallery-thumb:hover {
+    transform: scale(1.03);
+}
+
+/* 4. تأثير بسيط عند تمرير الماوس على كرت الفعالية */
+.event-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #e5e7eb;
+}
+
+.event-card:hover {
+    transform: translateY(-4px);
+}
+
+/* 5. صورة أعضاء الفريق في صفحة عن الدليل */
+.team-avatar {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+}
+
+/* 6. زر العودة للأعلى (Bonus) */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    display: none;
+    background-color: #1e40af;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    z-index: 999;
+}
+
+#scrollTopBtn:hover {
+    background-color: #1d4ed8;
+}
+
+/* 7. الوضع الليلي البسيط عبر تبديل صنف CSS (Bonus) */
+body.dark-mode {
+    background-color: #121212;
+    color: #e4e4e7;
+}
+
+body.dark-mode .card,
+body.dark-mode .bg-section-alt,
+body.dark-mode .student-info-bar,
+body.dark-mode .modal-content {
+    background-color: #1e1e24 !important;
+    color: #e4e4e7;
+    border-color: #333;
+}
+
+body.dark-mode .text-muted,
+body.dark-mode .text-secondary {
+    color: #a1a1aa !important;
+}
+
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+    background-color: #27272a;
+    color: #ffffff;
+    border-color: #3f3f46;
+}
+
+/* 8. تحسين التجاوب على شاشات الجوال والتابلت */
+@media (max-width: 768px) {
+    .slider-img {
+        height: 250px;
+    }
+
+    .categories-flex .btn {
+        font-size: 0.85rem;
+    }
+}
